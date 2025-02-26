@@ -1,0 +1,23 @@
+TRACE [2025-02-26 14:52:51] Logging to D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/inst/extdata/Logfiles/processing.log
+TRACE [2025-02-26 14:52:51] Processing data
+TRACE [2025-02-26 14:52:51] Reading yaml configuration
+TRACE [2025-02-26 14:52:51] Found Enrichment_background_data.Rmd
+TRACE [2025-02-26 14:52:51] Found Isomers_data.Rmd
+TRACE [2025-02-26 14:52:51] Found LION_data.Rmd
+TRACE [2025-02-26 14:52:51] Found S2IsoMEr_examples.Rmd
+TRACE [2025-02-26 14:52:51] Processing 1 of 4: D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/data-raw/Enrichment_background_data.Rmd
+TRACE [2025-02-26 14:52:52] 16 data set(s) created by Enrichment_background_data.Rmd
+TRACE [2025-02-26 14:52:52] Processing 2 of 4: D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/data-raw/Isomers_data.Rmd
+TRACE [2025-02-26 14:52:56] 2 data set(s) created by Isomers_data.Rmd
+TRACE [2025-02-26 14:52:57] Processing 3 of 4: D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/data-raw/LION_data.Rmd
+TRACE [2025-02-26 14:53:05] 3 data set(s) created by LION_data.Rmd
+TRACE [2025-02-26 14:53:16] Processing 4 of 4: D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/data-raw/S2IsoMEr_examples.Rmd
+TRACE [2025-02-26 14:53:17] 5 data set(s) created by S2IsoMEr_examples.Rmd
+TRACE [2025-02-26 14:53:23] NEWS.md file not found, creating!
+TRACE [2025-02-26 14:54:08] Saving to data
+TRACE [2025-02-26 14:54:25] Copied documentation to D:/Theodore_EMBL/Bootstrapping_paper/S2IsoMErData/S2IsoMErData/R/S2IsoMErData.R
+TRACE [2025-02-26 14:54:25] Done
+TRACE [2025-02-26 14:54:25] DataPackageR succeeded
+TRACE [2025-02-26 14:54:25] Building documentation
+TRACE [2025-02-26 14:54:48] Building package
+TRACE [2025-02-26 15:11:12] Rebuilding data package documentation.

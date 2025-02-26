@@ -1,0 +1,22 @@
+---
+title: "S2IsoMEr_examples"
+author: "Bishoy Wadie"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+path = "raw_data/S2IsoMEr_examples"
+datapkgs_path = DataPackageR::project_extdata_path()
+data_path = file.path(datapkgs_path,path)
+
+example_ORA_obj = readRDS(file.path(data_path,"example_ORA_obj.rds"))
+example_ORA_custom_universe = readRDS(file.path(data_path,"example_ORA_custom_universe.rds"))
+example_MSEA_obj = readRDS(file.path(data_path,"example_MSEA_obj.rds"))
+example_MSEA_multicond = readRDS(file.path(data_path,"example_MSEA_multicond_res.rds"))
+example_ORA_markers = readRDS(file.path(data_path,"example_ORA_markers.rds"))
+```
+

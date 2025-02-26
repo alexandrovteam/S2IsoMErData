@@ -1,0 +1,25 @@
+---
+title: Enrichment Background data
+author: Bishoy Wadie
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Enrichment Background data}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+path = "raw_data/RampDB_universe_lists"
+datapkgs_path = DataPackageR::project_extdata_path()
+for (file in list.files(file.path(datapkgs_path,path))){
+  filename = sub(".rds.*", "", file)
+  res = readRDS(file.path(datapkgs_path,path, file))
+  assign(filename, res)
+}
+
+```
+

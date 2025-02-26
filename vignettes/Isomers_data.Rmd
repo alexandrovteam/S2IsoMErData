@@ -1,0 +1,43 @@
+---
+title: Isomer Data
+author: Bishoy Wadie
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{Isomer Data}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include<-FALSE}
+knitr::opts_chunk$set(echo <- TRUE)
+```
+
+
+```{r}
+library(dplyr)
+library(data.table)
+
+path = "raw_data/Isomers_data"
+datapkgs_path = DataPackageR::project_extdata_path()
+data_path = file.path(datapkgs_path,path)
+
+exact_masses <- readRDS(file.path(data_path,"old_exact_masses.rds"))
+new_exact_masses <- readRDS(file.path(data_path,"metabo_exact_masses.rds"))
+HMDB_combined <- readRDS(file.path(data_path,"HMDB_combined.rds"))
+curated_metaspace_db <- readRDS(file.path(data_path,"Curated_metaspace_db_23_08_2023.rds"))
+
+formulas_to_exclude <- HMDB_combined$taxonomy_info$accession[
+  which(HMDB_combined$taxonomy_info$kingdom == "Inorganic compounds")]
+formulas_to_exclude <- HMDB_combined$basic_info$chemical_formula[
+  which(HMDB_combined$basic_info$accession %in% formulas_to_exclude)]
+
+new_exact_masses <- new_exact_masses %>% dplyr::filter(!formula %in% formulas_to_exclude)
+new_exact_masses <- new_exact_masses[which(!new_exact_masses$formula %in% exact_masses$formula),]
+
+final_exact_masses <- rbind.data.frame(exact_masses, new_exact_masses)
+
+exact_masses <- final_exact_masses %>% data.table::as.data.table()
+metaspace_databases <- curated_metaspace_db %>% data.table::as.data.table()
+```
+
+

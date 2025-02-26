@@ -1,0 +1,30 @@
+---
+title: LION
+author: Bishoy Wadie
+output: html_document
+vignette: >
+  %\VignetteIndexEntry{LION}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+require(dplyr)
+require(data.table)
+
+path = "raw_data/LION"
+datapkgs_path = DataPackageR::project_extdata_path()
+data_path = file.path(datapkgs_path,path)
+
+LUT = readRDS(file.path(data_path,"LION_LUT.rds"))
+pathway_list_LION = readRDS(file.path(data_path,"pathway_list_LION.rds"))
+termsSelection = readRDS(file.path(data_path,"termsSelection.rds"))
+
+LION_LUT = LUT %>% data.table::as.data.table()
+```
+
+

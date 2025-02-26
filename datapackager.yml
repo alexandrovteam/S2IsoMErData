@@ -1,0 +1,39 @@
+configuration:
+  files:
+    Enrichment_background_data.Rmd:
+      enabled: yes
+    Isomers_data.Rmd:
+      enabled: yes
+    LION_data.Rmd:
+      enabled: yes
+    S2IsoMEr_examples.Rmd:
+      enabled: yes
+  objects:
+  - metaspace_databases
+  - exact_masses
+  - LION_LUT
+  - pathway_list_LION
+  - termsSelection
+  - LipidMaps_category_name
+  - LipidMaps_category_sf
+  - LipidMaps_main_class_name
+  - LipidMaps_main_class_sf
+  - LipidMaps_pathway_name
+  - LipidMaps_pathway_sf
+  - LipidMaps_sub_class_name
+  - LipidMaps_sub_class_sf
+  - Metabo_class_name
+  - Metabo_class_sf
+  - Metabo_pathway_name
+  - Metabo_pathway_sf
+  - Metabo_sub_class_name
+  - Metabo_sub_class_sf
+  - Metabo_super_class_name
+  - Metabo_super_class_sf
+  - example_ORA_obj
+  - example_ORA_custom_universe
+  - example_MSEA_obj
+  - example_MSEA_multicond
+  - example_ORA_markers
+  render_root:
+    tmp: '89232'

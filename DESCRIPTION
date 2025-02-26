@@ -1,0 +1,26 @@
+Package: S2IsoMErData
+Title: S2IsoMEr Data
+Version: 1.0
+Authors@R: 
+    c(
+    person("Bishoy", "Wadie", role = c("aut", "cre"), email = "bishoy.wadie@embl.de",
+           comment = c(ORCID = "0000-0001-8692-1107")),
+    person("Martijn", "Molenaar", role = c("aut"), email = "m.r.molenaar@protonmail.com",
+           comment = c(ORCID = "0000-0001-5221-608X")),
+    person("Theodore", "Alexandrov", role = c("cph", "fnd"), email = "talexandrov@health.ucsd.edu",
+           comment = c(ORCID = "0000-0001-9464-6125"))
+           )
+Description: Data required for S2IsoMEr R package. Data includes enrichment backgrounds, isomeric/isobaric ions, LION lipid sets and S2IsoMEr example objects.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+DataVersion: 0.1.0
+Depends: 
+    R (>= 3.5.0)
+Date: 2025-02-26
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
